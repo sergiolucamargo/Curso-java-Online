@@ -2,7 +2,7 @@ package entities;
 
 public class Student
 {
-    public static final int AVERAGEGRADE = 60;
+    public static final int AVERAGE_GRADE = 60;
     public String name;
     public double grades01;
     public double grades02;
@@ -13,9 +13,9 @@ public class Student
     }
     public double differencePoints()
     {
-        if (resultGrade() < AVERAGEGRADE)
+        if (resultGrade() < AVERAGE_GRADE)
         {
-            return AVERAGEGRADE - resultGrade();
+            return AVERAGE_GRADE - resultGrade();
         }
         else
         {

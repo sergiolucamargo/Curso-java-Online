@@ -25,7 +25,7 @@ public class TotalGrade
 
         System.out.printf("FINAL GRADE: %.2f%n", student.resultGrade());
 
-        if (student.resultGrade() < student.AVERAGEGRADE)
+        if (student.resultGrade() < student.AVERAGE_GRADE)
         {
             System.out.println("FAILED");
             System.out.printf("MISSING %.2f POINTS%n", student.differencePoints());

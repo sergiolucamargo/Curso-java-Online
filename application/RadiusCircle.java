@@ -11,18 +11,18 @@ public class RadiusCircle
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        Calculator calc = new Calculator();
+        //Calculator calc = new Calculator();
         double radius, circle, vol;
 
         System.out.println("Enter radius: ");
         radius = sc.nextDouble();
 
-        circle = calc.circumference(radius);
-        vol = calc.volume(radius);
+        circle = Calculator.circumference(radius);
+        vol = Calculator.volume(radius);
 
         System.out.printf("Circumference: %.3f%n", circle);
         System.out.printf("Volume: %.3f%n", vol);
-        System.out.printf("PI value: %.5f%n", calc.PI);
+        System.out.printf("PI value: %.5f%n", Calculator.PI);
 
         sc.close();
     }

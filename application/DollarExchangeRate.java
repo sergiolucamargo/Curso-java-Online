@@ -21,7 +21,7 @@ public class DollarExchangeRate
         valueIOF = 100 * CurrencyConverter.IOF;
 
         System.out.printf("Amount to be paid in reais = %.2f%n", CurrencyConverter.purchasePrice(priceDollar, buyDollars));
-        System.out.printf("%nIOF value: %.2f", valueIOF);
+        System.out.printf("%nIOF value: %.2f%%", valueIOF);
 
         sc.close();
     }

@@ -17,20 +17,40 @@ public class BankTransition
         System.out.print("Enter account number: ");
         int number = sc.nextInt();
         System.out.print("Enter account holder: ");
+        sc.nextLine();
         String nameHolder = sc.nextLine();
 
         System.out.println("Is there na initial deposit (y/n)? ");
-        char yesOrNo = sc.nextLine().charAt(0);
+        char yesOrNo = sc.next().charAt(0);
 
-        if (yesOrNo == 'y');
+        if (yesOrNo == 'y')
         {
-            System.out.println("Enter initial deposit value: ");
-            double bankDeposit = sc.nextDouble();
+            System.out.print("Enter initial deposit value: ");
+            double firstDeposit = sc.nextDouble();
+            account = new BankAccount(number, nameHolder, firstDeposit);
         }
         else
         {
-            System.out.println("Account data:");
-            
+            account = new BankAccount(number, nameHolder);
         }
+        System.out.println();
+        System.out.println("Account data: ");
+        System.out.println(account);
+
+        System.out.println();
+        System.out.print("Enter a deposit value: ");
+        double newDepositAmount = sc.nextDouble();
+        account.deposit(newDepositAmount);
+        System.out.println("Update Account data: ");
+        System.out.println(account);
+
+        System.out.println();
+        System.out.print("Enter a withdraw value: ");
+        double newWithdrawalAmount = sc.nextDouble();
+        account.withdraw(newWithdrawalAmount);
+        System.out.println("Update Account data: ");
+        System.out.println(account);
+
+        sc.close();
     }
 }
